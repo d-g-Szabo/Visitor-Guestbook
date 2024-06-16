@@ -73,6 +73,16 @@ textarea {
   padding: 1rem;
 }
 
+.message-container div {
+  margin: 0.5rem;
+  background-color: #1a1a1a;
+  color: #ffffff;
+  padding: 0.5rem;
+  border-radius: 8px;
+  text-wrap: wrap;
+  overflow: auto;
+}
+
 h3 {
   margin: 0;
   /* padding: 1rem; */
