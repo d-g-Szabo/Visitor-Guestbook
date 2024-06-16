@@ -8,7 +8,7 @@ function handleSubmitMessageForm(event) {
 
   const formData = Object.fromEntries(new FormData(messageForm));
   console.log(formData);
-  fetch("http://localhost:8008/message", {
+  fetch("https://visitor-guestbook-rmlb.onrender.com", {
     method: "POST", // This is where we set the POST HTTP verb
     headers: {
       "Content-Type": "application/json", // This tells the server we're sending stringified JSON data
