@@ -1,6 +1,6 @@
-# week03-assignment
+# week04-assignment
 
-Project: Build a Cookie Clicker Game
+Project: Build a Visitor Guestbook
 
 # Requirements:
 
@@ -32,7 +32,7 @@ I met all the requirements for this assignment. Did not have enough time this we
 
 # Wireframe:
 
-![](https://d-g-szabo.github.io/Visitor-Guestbook/visitor-guestbook-wireframe.jpg)
+![](https://raw.githubusercontent.com/d-g-Szabo/Visitor-Guestbook/main/visitor-guestbook-wireframe.jpg)
 
 # Reflections:
 
