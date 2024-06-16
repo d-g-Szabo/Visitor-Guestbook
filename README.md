@@ -1,10 +1,8 @@
-User Stories
+# week03-assignment
 
-    🐿️ As a user, I want to visit the website and read the information on my phone or computer
-    🐿️ As a user, I want to be able to leave a message in the guestbook
-    🐿️ As a user, I want to be able to see all of the messages that have been left in the guestbook
+Project: Build a Cookie Clicker Game
 
-Requirements
+# Requirements:
 
 🎯 Create a page containing a form to leave a message and a list of all the messages that have been left.
 
@@ -17,27 +15,39 @@ Requirements
 🎯 Create an API GET route to retrieve all the messages from the database
 
 🎯 Fetch the messages from your API in the browser and display them on the page.
-Stretch Goals
+
+Stretch Goals:
 
 🏹 Add a delete button to each message, that sends a request to the server to delete the message
 
 🏹 Add a like button to each message, that sends a separate request to the server to increment the likes on the message
 
-Please also provide an assignment reflection in your project README.md file.
-(Required)
-🎯 Please mention the requirements you met and which goals you achieved for this assignment.
+I met all the requirements for this assignment. Did not have enough time this weeked to do the stretch goals but I will come back and do them during the week.
 
-🎯 Were there any requirements or goals that you were not quite able to achieve?
+# User Stories:
 
-🎯 If so, could you please tell us what was it that you found difficult about these tasks?
+    🐿️ As a user, I want to visit the website and read the information on my phone or computer
+    🐿️ As a user, I want to be able to leave a message in the guestbook
+    🐿️ As a user, I want to be able to see all of the messages that have been left in the guestbook
 
-(Optional)
-🏹 Feel free to add any other reflections you would like to share about your submission e.g.
- 
+# Wireframe:
 
-    What went really well and what could have gone better?
+![](https://d-g-szabo.github.io/Visitor-Guestbook/visitor-guestbook-wireframe.jpg)
 
-    Detailing useful external sources that helped you complete the assignment (e.g Youtube tutorials).
+# Reflections:
 
-    Describing errors or bugs you encountered while completing your assignment.
+What went really well and what could have gone better?
 
+Getting the data from the database and displaying them on the webpage was pretty easy.
+
+Useful external sources:
+
+- None (exept the previus days code)
+
+Describing errors or bugs you encountered:
+
+I encountered a bug when fetching the data from the API. Standard promise problem, fixed it with providing async and await to every place it needed.
+
+Requesting feedback about a specific part of your submission:
+
+Well, I would like to get some general feedback on the structure of my code.
