@@ -1,21 +1,23 @@
 const messageForm = document.querySelector("#messageForm");
 const messageList = document.querySelector(".message-container");
-const link = "https://visitor-guestbook-rmlb.onrender.com"; // This is the URL of the API //http://localhost:8008
+const link = "https://visitor-guestbook-rmlb.onrender.com"; // This is the URL of the API http://localhost:8008
 
-function handleSubmitMessageForm(event) {
+async function handleSubmitMessageForm(event) {
   event.preventDefault();
   console.log("Form submitted!");
-  // do something with the form data here
-
   const formData = Object.fromEntries(new FormData(messageForm));
-  console.log(formData);
-  fetch(`${link}/message`, {
-    method: "POST", // This is where we set the POST HTTP verb
-    headers: {
-      "Content-Type": "application/json", // This tells the server we're sending stringified JSON data
-    },
-    body: JSON.stringify(formData),
-  });
+  //   console.log(formData);
+  try {
+    await fetch(`${link}/message`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(formData),
+    });
+  } catch (error) {
+    console.error("Error submitting message", error);
+  }
 }
 
 messageForm.addEventListener("submit", handleSubmitMessageForm);
