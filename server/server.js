@@ -22,3 +22,18 @@ app.listen(PORT, () => {
 app.get("/", (req, res) => {
   res.send("Hello World");
 });
+
+// Create an API POST route to accept the text from your message input form
+app.post("/message", async (req, res) => {
+  const { text } = req.body;
+
+  const query = `INSERT INTO messages (text) VALUES ($1) RETURNING *`;
+
+  try {
+    const result = await db.query(query, [text]);
+    res.json(result.rows[0]);
+  } catch (error) {
+    console.error("Error executing query", error);
+    res.status(500).json({ error: "Internal server error" });
+  }
+});
