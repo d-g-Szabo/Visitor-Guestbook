@@ -1,5 +1,6 @@
 const messageForm = document.querySelector("#messageForm");
 const messageList = document.querySelector(".message-container");
+const link = "https://visitor-guestbook-rmlb.onrender.com"; // This is the URL of the API //http://localhost:8008
 
 function handleSubmitMessageForm(event) {
   event.preventDefault();
@@ -8,7 +9,7 @@ function handleSubmitMessageForm(event) {
 
   const formData = Object.fromEntries(new FormData(messageForm));
   console.log(formData);
-  fetch("https://visitor-guestbook-rmlb.onrender.com", {
+  fetch(`${link}/message`, {
     method: "POST", // This is where we set the POST HTTP verb
     headers: {
       "Content-Type": "application/json", // This tells the server we're sending stringified JSON data
@@ -23,7 +24,7 @@ messageForm.addEventListener("submit", handleSubmitMessageForm);
 
 // Create a function to fetch the messages from the API
 async function fetchMessages() {
-  const response = await fetch("http://localhost:8008/messages");
+  const response = await fetch(`${link}/messages`);
   const messages = await response.json();
   return messages;
 }
